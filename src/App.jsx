@@ -1,11 +1,11 @@
 import { createRoot } from "react-dom/client";
-import SearchParams from "./SearchParams";
+import Test from "./Test";
 
 const App = () => {
   return (
     <div>
-      <h1>Adopt Me!</h1>
-      <SearchParams />
+      <h1>Welcome To React</h1>
+      <Test />
     </div>
   );
 };
