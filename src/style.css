@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+  background: url(images/museum-of.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main{
+    margin: 5rem;
+    padding: 2.5rem;
+    border: 5px solid #007bff;
+    border-radius: 5px;
+}
+
+.main h2{
+    text-align: center;
+    margin-top: -2.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Login form specific styles */
+  
+  #login {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  #login h2 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Signup form specific styles */
+  
+  #signup {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  #signup h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .container {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+ }
+    .btn{
+      margin-top: 10px;
+	  padding: 10px;
+	  font-size: 16px;
+	  background: #7d2f41;
+    border-radius: 20px;
+	}
+/* 
+  .btn{
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: red;
+    
+  } */
