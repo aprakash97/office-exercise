@@ -2,7 +2,7 @@ import { useState } from "react";
 import swal from "sweetalert";
 
 const Signup = () => {
-  //signup
+  //Signup - working on 21/4/2023
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
