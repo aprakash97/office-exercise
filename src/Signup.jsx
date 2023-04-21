@@ -1,4 +1,5 @@
 import { useState } from "react";
+import swal from "sweetalert";
 
 const Signup = () => {
   //signup
@@ -6,6 +7,8 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const enabled = password.length > 0;
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -31,9 +34,39 @@ const Signup = () => {
       password.length == 0 ||
       setConfirmPassword.length == 0
     ) {
-      alert("Complete all fields");
+      swal("Complete all fields");
+    } else if (password !== confirmPassword) {
+      swal("Passwords don't match");
+    } else {
+      // API FUNCTION
+      // Send a POST request to the signup endpoint
+      fetch("https://d321-112-134-214-157.ngrok-free.app/api/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password,
+        }),
+      })
+        // .then((response) => response.json())
+        .then((response) => response.text()) // Return the response as text
+        .then((data) => {
+          //if (data.Success) {
+          if (data === "Success") {
+            swal("Signup successful");
+          } else {
+            swal("Signup failed");
+          }
+        })
+        .catch((error) => {
+          // Handle any errors here
+          console.log(error);
+          swal("Signup failed catch");
+        });
     }
-    // function API
   };
 
   return (
@@ -63,6 +96,7 @@ const Signup = () => {
               type="password"
               value={confirmPassword}
               onChange={handleConfirmPasswordChange}
+              disabled={!enabled}
             />
           </label>
           <button type="submit" className="submit">

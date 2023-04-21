@@ -1,4 +1,5 @@
 import { useState } from "react";
+import swal from "sweetalert";
 
 const Signin = () => {
   //signin
@@ -18,7 +19,8 @@ const Signin = () => {
     // function API
     console.log(email, password);
     if (email.length == 0 || password.length == 0) {
-      alert("Complete all fields");
+      //   alert("Complete all fields");
+      swal("Complete all fields");
     }
   };
   return (
