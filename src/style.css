@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   background: url(images/museum-of.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -121,4 +121,13 @@ button[type="submit"]:hover {
 
 .submit {
   margin: 2rem 0;
+}
+
+.whole-section {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.new-section {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: red;
 }

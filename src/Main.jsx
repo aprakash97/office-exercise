@@ -13,7 +13,7 @@ const Main = () => {
 
   return (
     //CONTROLLED FORM
-    <div>
+    <div >
       <div className="container">
         <button onClick={handleClick} className="btn">
           {active ? "Already Have an Account?" : "Don't Have an Account?"}
