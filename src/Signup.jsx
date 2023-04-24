@@ -1,13 +1,14 @@
 import { useState } from "react";
 import swal from "sweetalert";
-//BEFORE NEW COMPONENT
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  //Signup - working on 21/4/2023
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const enabled = password.length > 0;
 
@@ -39,8 +40,6 @@ const Signup = () => {
     } else if (password !== confirmPassword) {
       swal("Passwords don't match");
     } else {
-      // API FUNCTION
-      // Send a POST request to the signup endpoint
       fetch("https://3f49-112-134-211-18.ngrok-free.app/api/users", {
         method: "POST",
         headers: {
@@ -52,18 +51,16 @@ const Signup = () => {
           password: password,
         }),
       })
-        // .then((response) => response.json())
-        .then((response) => response.text()) // Return the response as text
+        .then((response) => response.text())
         .then((data) => {
-          //if (data.Success) {
           if (data === "Success") {
             swal("Signup successful");
+            navigate("/home"); // Navigate to new home component
           } else {
             swal("Signup failed");
           }
         })
         .catch((error) => {
-          // Handle any errors here
           console.log(error);
           swal("Signup failed catch");
         });
