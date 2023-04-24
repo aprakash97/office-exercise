@@ -1,5 +1,6 @@
 import { useState } from "react";
 import swal from "sweetalert";
+//BEFORE NEW COMPONENT
 
 const Signup = () => {
   //Signup - working on 21/4/2023
@@ -40,7 +41,7 @@ const Signup = () => {
     } else {
       // API FUNCTION
       // Send a POST request to the signup endpoint
-      fetch("https://d321-112-134-214-157.ngrok-free.app/api/users", {
+      fetch("https://3f49-112-134-211-18.ngrok-free.app/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
