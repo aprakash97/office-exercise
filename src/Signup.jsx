@@ -41,7 +41,7 @@ const Signup = () => {
       swal("Passwords don't match");
     } else {
       fetch(
-        "https://4352-112-134-209-22.ngrok-free.app/api/users/RegisterUser",
+        "https://f354-112-134-209-22.ngrok-free.app/api/users/RegisterUser",
         {
           method: "POST",
           headers: {

@@ -12,7 +12,7 @@ const Home = () => {
 
   async function requestUsers() {
     const res = await fetch(
-      "https://4352-112-134-209-22.ngrok-free.app/api/users/GetUsers"
+      "https://f354-112-134-209-22.ngrok-free.app/api/users/GetUsers"
       // "http://pets-v2.dev-apis.com/pets"
     );
     const json = await res.json();
