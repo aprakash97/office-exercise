@@ -131,3 +131,57 @@ button[type="submit"]:hover {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: red;
 }
+
+/* refactoring */
+
+.pet {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  overflow: hidden;
+  margin: 15px 0;
+  border-bottom: #333 2px solid;
+}
+
+.pet:hover{
+  background: rgba(70, 66, 66, 0.2);
+}
+
+.search {
+  width: 55%;
+  padding: 15px;
+  border-radius: 9px;
+  float: left;
+  margin-bottom: 25px;
+}
+
+.info {
+  float: left;
+  width: 80%;
+  height: 100px;
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: space-around;
+  display: block;
+  padding: 10px;
+}
+
+.image-container {
+  clip-path: circle(50% at 50% 50%);
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 0px 20px 0px 10px;
+}
+
+.main2 {
+  margin: 5rem;
+  padding: 2.5rem;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+}

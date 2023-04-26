@@ -8,6 +8,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         {/* <Route path="/" element={<Signup />} /> */}
+        {/* ADD A ROUTE, WHEN CLICKING A USER, OR EDIT DETAILS COMPONENT */}
         <Route path="/" element={<Main />} />
         <Route path="/home" element={<Home />} />
       </Routes>

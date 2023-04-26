@@ -40,17 +40,20 @@ const Signup = () => {
     } else if (password !== confirmPassword) {
       swal("Passwords don't match");
     } else {
-      fetch("https://3f49-112-134-211-18.ngrok-free.app/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-        }),
-      })
+      fetch(
+        "https://4352-112-134-209-22.ngrok-free.app/api/users/RegisterUser",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            password: password,
+          }),
+        }
+      )
         .then((response) => response.text())
         .then((data) => {
           if (data === "Success") {
