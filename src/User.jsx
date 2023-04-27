@@ -1,19 +1,16 @@
 const User = (props) => {
-  const { name, city, images, id } = props;
+  const { name, email, id } = props;
 
-  let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
-  if (images.length) {
-    hero = images[0];
-  }
+  // let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
 
   return (
     <a href={`/User/${id}`} className="pet">
-      <div className="image-container">
+      {/* <div className="image-container">
         <img src={hero} alt={name} />
-      </div>
+      </div> */}
       <div className="info">
         <h1>{name}</h1>
-        <h2>{city}</h2>
+        <h2>{email}</h2>
       </div>
     </a>
   );

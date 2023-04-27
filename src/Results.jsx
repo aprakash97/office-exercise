@@ -12,7 +12,7 @@ const Results = ({ users }) => {
               key={user.id}
               name={user.name}
               images={user.images}
-              //   email={user.email}
+              email={user.email}
               city={user.city}
               id={user.id}
             />

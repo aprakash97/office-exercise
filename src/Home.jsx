@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import Results from "./Results";
+import Results from "./Results";
 // import User from "./User";
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
 
   async function requestUsers() {
     const res = await fetch(
-      "https://f354-112-134-209-22.ngrok-free.app/api/users/GetUsers"
+      "http://devsaki.somee.com/api/users/getusers"
       // "http://pets-v2.dev-apis.com/pets"
     );
     const json = await res.json();
@@ -42,7 +42,7 @@ const Home = () => {
         <h1>{user.name}</h1>;
         // <User name={user.name} email={user.email} />;
       })}
-      {/* <Results users={users} /> */}
+      <Results users={users} />
     </div>
   );
 };
