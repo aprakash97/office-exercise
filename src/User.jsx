@@ -35,7 +35,7 @@ const User = (props) => {
         className="btn-grad"
         onClick={(e) => {
           e.preventDefault();
-          console.log({ email });
+          console.log("Deleted:", email);
         }}
       >
         Delete
