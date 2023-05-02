@@ -9,12 +9,10 @@ const Results = ({ users }) => {
         users.map((user) => {
           return (
             <User
-              key={user.id}
+              key={user.userID}
               name={user.name}
-              images={user.images}
               email={user.email}
-              city={user.city}
-              id={user.id}
+              id={user.userID}
             />
           );
         })

@@ -42,7 +42,7 @@ const Home = () => {
         <h1>{user.name}</h1>;
         // <User name={user.name} email={user.email} />;
       })}
-      <Results users={users} />
+      <Results users={users} key={users.id} />
     </div>
   );
 };
